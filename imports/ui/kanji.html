@@ -1,0 +1,34 @@
+<template name="kanji">
+	<ul id="kanji-area" >
+        {{#if stageTwo}}
+				<li>
+			<h3>
+				{{text}}
+			</h3>
+		</li>
+        {{/if}}
+        <li>
+			<canvas id="kanji-canvas" width="100" height="100">
+			</canvas>
+		</li>
+        
+            
+	</ul>
+	{{description}}<br>
+    {{#if stageTwo}}
+        <button class="correct-answer">
+            It was right!
+        </button>
+        <button class="incorrect-answer">
+            It was wrong :(
+        </button>
+        <br>
+    {{else}}
+        <button class="check-answer">
+        Check Kanji
+    </button>
+    {{/if}}
+    <button class="delete-kanji">
+        Delete this kanji
+    </button>
+</template>

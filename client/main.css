@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient(-90deg, #003791, #456291);
+  /* Standard syntax */ }
+  body .container ul {
+    list-style-type: none; }
+  body .container li {
+    display: block; }
+  body .nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; }
+  body .nav-bar li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px; }
+  body .nav-bar li:hover {
+    background-color: #111; }
+
+/*# sourceMappingURL=main.css.map */

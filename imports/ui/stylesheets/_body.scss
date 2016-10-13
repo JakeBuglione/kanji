@@ -1,0 +1,25 @@
+
+body{
+@import './kanji';
+      background: linear-gradient(-90deg, #003791, #456291); /* Standard syntax */
+.nav-bar {
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    li{
+        float: left;
+        display: block;
+        color:white;
+        text-align: center;
+        padding: 10px 10px;
+
+    }
+    li:hover{
+        background-color: #111;
+    }
+}
+}
