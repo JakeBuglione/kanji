@@ -5,6 +5,8 @@ body {
     list-style-type: none; }
   body .container li {
     display: block; }
+  body .container canvas {
+    background-color: white; }
   body .nav-bar ul {
     list-style-type: none;
     margin: 0;
