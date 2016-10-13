@@ -1,37 +1,36 @@
 <body>
-    <div class = "nav-bar">
-        <ul>
-            <li>
-                <button type="button" class="statsMode">Stats</button>
-            </li>
-            <li>
-                <button type="button" class = "learnMode">Learn</button>
-            </li>
-            <li>
-                <button type="button" class="listMode">Kanji List</button>
-            </li>
-        </ul>
-    </div>
-    {{#if modeStat}}
-    {{else}}
-        {{#if modeList}}
-            {{#each kanjis}}
-                {{> kanji}}
-            {{/each}}
-        {{else}}
-            <h1>
-                {{kanjiCount}} Kanji Left to Study
-            </h1>
-            <div class = "container">
-                {{#with oneKanjis}}
-                    {{> kanji}}
-                {{/with}}
-            </div>
-        {{/if}}
-    {{/if}}
-    <form class="new-kanji">
-        <input type="text" name="kanji" placeholder = "Add New Kanji Here"/><br>
-        <input type="text" name="description" placeholder = "Put Description Here"/><br>
-        <input type="Submit" value="Submit"/>
-    </form>
+	<div class="nav-bar">
+		<ul>
+			<li>
+				<button type="button" class="statsMode">Stats</button>
+			</li>
+			<li>
+				<button type="button" class="learnMode">Learn</button>
+			</li>
+			<li>
+				<button type="button" class="listMode">Kanji List</button>
+			</li>
+		</ul>
+	</div>
+ <!-- default for when learn is active-->
+{{#unless modeStat}}{{#unless modeList}}
+    <h1>
+	{{kanjiCount}} Kanji Left to Study
+	</h1>
+	<div class="container">
+		{{#with oneKanjis}} {{> kanji}} {{/with}}
+	</div>
+{{/unless}}{{/unless}}
+
+<!-- for when list is active-->
+{{#if modeList}}
+    {{#each kanjis}}
+        {{> listItems}}
+    {{/each}}
+	<form class="new-kanji">
+		<input type="text" name="kanji" placeholder="Add New Kanji Here" /><br>
+		<input type="text" name="description" placeholder="Put Description Here" /><br>
+		<input type="Submit" value="Submit" />
+	</form>
+{{/if}}
 </body>

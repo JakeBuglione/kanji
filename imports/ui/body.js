@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 //Load in Templates
 import './body.html';
 import './kanji.js';
+import './listItems.js'
 
 
 //Load in Mongo collections
@@ -57,10 +58,17 @@ Template.body.events({
 
         //get input from form
         const target = event.target;
-        const text = target.kanji.value;
+        const kanji = target.kanji.value;
+        const desc = target.description.value;
 
         //put new kanji into collection
-        Kanjis.insert({ text });
+        Kanjis.insert({
+            text:kanji,
+            description:desc,
+            timesPracticed:0,
+            timesCorrect:0,
+            practiced:false,
+             });
 
         target.kanji.value = '';//blanks out form
 

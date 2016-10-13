@@ -46,10 +46,4 @@ Template.kanji.events({
         
 
     },
-
-    'click .delete-kanji'() {
-
-        Kanjis.remove(this._id);
-    },
-
 });
