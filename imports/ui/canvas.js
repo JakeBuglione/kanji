@@ -9,7 +9,7 @@ import './canvas.html';
  {
      
         clickX.push(x);
-        console.log('click');
+        //console.log('click');
         clickY.push(y);
         clickDrag.push(dragging);
 };
@@ -19,9 +19,9 @@ import './canvas.html';
         context.clearRect(0,0,canvas.width,canvas.height);
         context.strokeStyle = "#df4b26";
         context.lineJoin = "round";
-        context.lineWidth - 5;
+        context.lineWidth = 5;
         
-        for(var i=0; i<clickX.length; i++){
+        for(var i=0; i < clickX.length; i++){
             context.beginPath();
             if(clickDrag[i] && i){
                 context.moveTo(clickX[i-1], clickY[i-1]);
@@ -51,12 +51,12 @@ Template.canvas.events({
     'mousedown canvas'(event){
         var mouseX = event.pageX - canvas.offsetLeft;
         var mouseY = event.pageY - canvas.offsetTop;
-        console.log(mouseY);
+       // console.log(mouseY);
         
         paint = true;
         
         addClick(event.pageX - canvas.offsetLeft, event.pageY - canvas.offsetTop, true);
-        console.log(canvas.offsetLeft);
+        //console.log(canvas.offsetLeft);
         redraw();
     //context.fillStyle = 'green';
     //context.fillRect(10,10,200,200);
