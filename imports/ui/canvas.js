@@ -1,3 +1,5 @@
+//followed http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/
+//for canvas implementation
 import { Template } from 'meteor/templating';
 import './canvas.html';
 // Functions for events
