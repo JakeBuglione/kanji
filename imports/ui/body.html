@@ -13,15 +13,18 @@
 		</ul>
 	</div>
  <!-- default for when learn is active-->
-{{#unless modeStat}}{{#unless modeList}}
+{{#unless modeStat}}{{#unless modeList}}{{#unless noneLeft}}
     <h1>
 	{{kanjiCount}} Kanji Left to Study
 	</h1>
 	<div class="container">
 		{{#with oneKanjis}} {{> kanji}} {{/with}}
 	</div>
-{{/unless}}{{/unless}}
-
+{{/unless}}{{/unless}}{{/unless}}
+<!-- shows reset button when none left-->
+{{#if noneLeft}}
+	<button type="button" class="noneLeft">Learn Again</button> 
+{{/if}}
 <!-- for when list is active-->
 {{#if modeList}}
     {{#each kanjis}}

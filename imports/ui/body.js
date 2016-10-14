@@ -50,6 +50,10 @@ Template.body.helpers({
     kanjiCount() {
         return Kanjis.find({ practiced: false }).count();
     },
+    //Checks if there are no kanji left to study
+    noneLeft(){
+        return Kanjis.find({ practiced: false }).count()==0;
+    }
 });
 
 Template.body.events({

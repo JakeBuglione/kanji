@@ -35,9 +35,6 @@ import './canvas.html';
             context.stroke();
             }
         };
-Template.canvas.onCreated(function(){
-
-});
 Template.canvas.onRendered(function () {
     canvas = document.getElementById('kanjiCanvas');
     context = canvas.getContext('2d');
@@ -57,7 +54,7 @@ Template.canvas.events({
         
         paint = true;
         
-        addClick(event.pageX - canvas.offsetLeft, event.pageY - canvas.offsetTop, true);
+        addClick(event.pageX - canvas.offsetLeft, event.pageY - canvas.offsetTop, false);
         //console.log(canvas.offsetLeft);
         redraw();
     //context.fillStyle = 'green';
@@ -66,7 +63,7 @@ Template.canvas.events({
     },
     'mousemove canvas'(event){
         if(paint){
-            addClick(event.pageX - canvas.offsetLeft, event.pageY - canvas.offsetTop,false);
+            addClick(event.pageX - canvas.offsetLeft, event.pageY - canvas.offsetTop,true);
             redraw();
         }
     },
@@ -76,6 +73,11 @@ Template.canvas.events({
     'mouseleave canvas'(){
         paint = false;
     },
+    'click .clearCanvas'(){
+        clickX = [];
+        clickY = [];
+        clickDrag = [];
+    }
 
 
 });
