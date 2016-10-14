@@ -89,7 +89,8 @@ Template.body.events({
         instance.state.set('mode', 3);
     },
     //may not work properly after made safe
+    //db.kanjis.update({},{$set:{practiced:false}},{multi:true});
     'click .noneLeft'(){
-        Kanjis.update({practiced:false},{multi:true});
+        Kanjis.update({},{practiced:false},{multi:true});
     },
 });

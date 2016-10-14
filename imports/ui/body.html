@@ -14,12 +14,14 @@
 	</div>
  <!-- default for when learn is active-->
 {{#unless modeStat}}{{#unless modeList}}{{#unless noneLeft}}
+<div class='learnContainer'>
     <h1>
 	{{kanjiCount}} Kanji Left to Study
 	</h1>
 	<div class="container">
 		{{#with oneKanjis}} {{> kanji}} {{/with}}
 	</div>
+</div>
 {{/unless}}{{/unless}}{{/unless}}
 <!-- shows reset button when none left-->
 {{#if noneLeft}}
@@ -27,9 +29,11 @@
 {{/if}}
 <!-- for when list is active-->
 {{#if modeList}}
+	<ul>
     {{#each kanjis}}
         {{> listItems}}
     {{/each}}
+	</ul>
 	<form class="new-kanji">
 		<input type="text" name="kanji" placeholder="Add New Kanji Here" /><br>
 		<input type="text" name="description" placeholder="Put Description Here" /><br>

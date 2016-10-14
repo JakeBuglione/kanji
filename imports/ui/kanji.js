@@ -35,8 +35,6 @@ Template.kanji.events({
                 practiced: true,
             },
         });
-        
-
     },
 
     'click .incorrect-answer'(event, instance) {
@@ -45,6 +43,5 @@ Template.kanji.events({
         Kanjis.update(this._id, {
             $set: { timesPracticed: this.timesPracticed += 1 },
         }); 
-
     },
 });

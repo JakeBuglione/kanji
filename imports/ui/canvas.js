@@ -38,6 +38,7 @@ import './canvas.html';
 Template.canvas.onRendered(function () {
     canvas = document.getElementById('kanjiCanvas');
     context = canvas.getContext('2d');
+    //context.backgroundColor = 'white';
 
     //context.fillStyle = 'green';
     //context.fillRect(10,10,200,200);

@@ -1,12 +1,13 @@
 body {
   background: linear-gradient(-90deg, #003791, #456291);
   /* Standard syntax */ }
-  body .container ul {
-    list-style-type: none; }
-  body .container li {
-    display: block; }
-  body .container canvas {
-    background-color: white; }
+  body .nav-bar button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 10px; }
+  body .nav-bar button:hover {
+    background-color: #111; }
   body .nav-bar ul {
     list-style-type: none;
     margin: 0;
@@ -18,8 +19,42 @@ body {
     display: block;
     color: white;
     text-align: center;
-    padding: 10px 10px; }
-  body .nav-bar li:hover {
-    background-color: #111; }
+    padding: 0px 0px; }
+  body .learnContainer {
+    float: center; }
+  body h1 {
+    text-align: center; }
+
+.container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+.container li {
+  float: left;
+  display: inline;
+  text-align: center;
+  padding: 10px 10px; }
+.container canvas {
+  background-color: white; }
+
+.kanjiText {
+  height: 15vh;
+  background-color: white;
+  font-size: 13vh;
+  padding: 3vw; }
+
+.description {
+  text-align: center; }
+
+.correct-answer .incorrect-answer {
+  float: center; }
+
+.kanjiListItems {
+  font-size: 5vh;
+  list-style-type: none;
+  margin: 1vh;
+  padding: 2vh;
+  background-color: #708fc1; }
 
 /*# sourceMappingURL=main.css.map */

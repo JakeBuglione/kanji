@@ -1,11 +1,38 @@
 .container{
     ul{
-        list-style-type: none;
+                list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
     }
     li{
-        display: block;
+        float: left;
+        display: inline;
+        text-align: center;
+        padding: 10px 10px;
     }
     canvas{
         background-color: white;
     }
 }
+    .kanjiText{
+        
+        height: 15vh;
+        background-color: white;
+        font-size: 13vh;
+        padding: 3vw;
+    }
+    .description{
+        text-align: center;
+    }
+    .correct-answer .incorrect-answer{
+        float:center;
+    }
+    .kanjiListItems{
+        font-size: 5vh;
+        list-style-type: none;
+        margin:1vh;
+        padding: 2vh;
+        background-color: #708fc1;
+        
+    }

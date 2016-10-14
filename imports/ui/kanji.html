@@ -1,21 +1,13 @@
 <template name="kanji">
-	<ul id="kanji-area" >
-        {{#if stageTwo}}
-				<li>
-			<h3>
-				{{text}}
-			</h3>
-		</li>
-        {{/if}}
-        <li>
+
 			<!--<canvas class="kanji-canvas" width="100" height="100">
 			</canvas>-->
-            {{> canvas}}
-		</li>
-        
+            <ul>
+            <li><div class=kanjiText>{{#if stageTwo}}{{text}}{{/if}}</div></li>
+            <li>{{> canvas}}</li>
+            </ul>
             
-	</ul>
-	{{description}}<br>
+	<div class="description">{{description}}</div><br>
     {{#if stageTwo}}
         <button class="correct-answer">
             It was right!

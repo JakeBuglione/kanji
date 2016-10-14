@@ -1,8 +1,17 @@
 
 body{
-@import './kanji';
       background: linear-gradient(-90deg, #003791, #456291); /* Standard syntax */
 .nav-bar {
+    button{
+        background-color: #333;
+        color:white;
+        border: none;
+        padding: 10px 10px;
+
+    }
+    button:hover{
+        background-color: #111;
+    }
     ul{
         list-style-type: none;
         margin: 0;
@@ -15,11 +24,14 @@ body{
         display: block;
         color:white;
         text-align: center;
-        padding: 10px 10px;
+        padding: 0px 0px;
 
     }
-    li:hover{
-        background-color: #111;
-    }
 }
+    .learnContainer{
+        float: center;
+    }
+    h1{
+        text-align: center;
+    }
 }
