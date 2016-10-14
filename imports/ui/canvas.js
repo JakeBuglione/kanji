@@ -77,6 +77,7 @@ Template.canvas.events({
         clickX = [];
         clickY = [];
         clickDrag = [];
+        redraw();
     }
 
 

@@ -88,4 +88,8 @@ Template.body.events({
     'click .listMode'(event, instance) {
         instance.state.set('mode', 3);
     },
-})
+    //may not work properly after made safe
+    'click .noneLeft'(){
+        Kanjis.update({practiced:false},{multi:true});
+    },
+});
