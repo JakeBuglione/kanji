@@ -79,8 +79,6 @@ Template.body.events({
     },
     'click .statsMode'(event, instance) {
         instance.state.set('mode', 1);
-        console.log('click');
-        console.log(instance.state.get('mode'));
     },
     'click .learnMode'(event, instance) {
         instance.state.set('mode', 2);
@@ -91,6 +89,9 @@ Template.body.events({
     //may not work properly after made safe
     //db.kanjis.update({},{$set:{practiced:false}},{multi:true});
     'click .noneLeft'(){
+        console.log('testing');
+        // update may be broken by meteor for now run manually.
         Kanjis.update({},{practiced:false},{multi:true});
+        console.log('worked');
     },
 });

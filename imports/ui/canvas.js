@@ -79,7 +79,19 @@ Template.canvas.events({
         clickY = [];
         clickDrag = [];
         redraw();
-    }
+    },
+    /*'click .correct-answer'(){
+        clickX = [];
+        clickY = [];
+        clickDrag = [];
+        redraw();
+    },
+    'click .incorrect-answer'(){
+        clickX = [];
+        clickY = [];
+        clickDrag = [];
+        redraw();
+    },*/
 
 
 });
